@@ -1,0 +1,30 @@
+.hotel-and-rating {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hotel-and-rating .hotel-and-rating-contennt {
+	display: flex;
+}
+
+.hotel-and-rating span {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #666666;
+}
+
+.hotel-and-rating .hotel-name {
+	max-width: 50%;
+	color: rgba(10, 53, 109, 1);
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 40px;
+}
+
+.hotel-and-rating .reviews {
+	width: 257px;
+	height: 51px;
+}

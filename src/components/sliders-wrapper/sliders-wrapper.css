@@ -1,0 +1,12 @@
+.test {
+	background-color: red;
+	overflow-wrap: none;
+	border: 3px solid blue;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	transition: all 1s;
+	transform: translateX();
+	max-width: 100%;
+	position: relative;
+}

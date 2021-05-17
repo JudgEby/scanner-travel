@@ -1,0 +1,10 @@
+.bunner-current-selected {
+	display: flex;
+	justify-content: space-between;
+	width: 1131px;
+	height: 80px;
+}
+
+.bunner-current {
+	display: flex;
+}

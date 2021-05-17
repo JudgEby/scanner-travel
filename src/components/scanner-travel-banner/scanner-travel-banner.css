@@ -1,0 +1,19 @@
+.scanner-travel-banner {
+	margin: 14px 0 0 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 236px;
+}
+
+.scanner-travel-banner span {
+	margin-top: 7px;
+	width: 90%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #0a356d;
+}
