@@ -140,7 +140,15 @@ const App = () => {
             <DateAndPrice date={'10 ноября, вт'} price={'от 12 399 ₽'} />
           </div>
         </div>
-        <HotelRoomsBar />
+        <div className={'hotel-rooms-bar'}>
+          <HotelRoomsBar slidersOrdersArr={[3, 4]} />
+        </div>
+        <div className={'hotel-rooms-bar'}>
+          <HotelRoomsBar slidersOrdersArr={[5, 6]} />
+        </div>
+        <div className={'hotel-rooms-bar'}>
+          <HotelRoomsBar slidersOrdersArr={[7, 8]} />
+        </div>
       </div>
     </div>
   )

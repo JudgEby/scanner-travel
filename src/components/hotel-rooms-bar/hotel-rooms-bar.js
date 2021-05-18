@@ -46,7 +46,7 @@ const RightSection = styled.div`
   padding-top: 32px;
 `
 
-const HotelRoomsBar = () => {
+const HotelRoomsBar = ({ slidersOrdersArr = [1, 2] }) => {
   return (
     <MaimWrapper>
       <LeftSection>
@@ -92,7 +92,8 @@ const HotelRoomsBar = () => {
         </Features>
       </LeftSection>
       <RightSection>
-        <HotelCard />
+        <HotelCard sliderOrder={slidersOrdersArr[0]} />
+        <HotelCard sliderOrder={slidersOrdersArr[1]} />
       </RightSection>
     </MaimWrapper>
   )

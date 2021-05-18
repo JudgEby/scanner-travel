@@ -19,7 +19,7 @@ const Buttons = styled.div`
   }
 `
 
-const SlidersWrapper = () => {
+const SlidersWrapper = ({ slidesItemsArr = null, sliderOrder = 1 }) => {
   const [changeSlideNum, setChangeSlideNum] = useState(0)
   const [firstInit, setFirstInit] = useState(true)
   const [listenedSliderCurrentSlide, setListenedSliderCurrentSlide] =
@@ -60,6 +60,23 @@ const SlidersWrapper = () => {
 
   const currentSlideListener = (slideNum) => {
     setListenedSliderCurrentSlide(slideNum)
+  }
+
+  if (slidesItemsArr) {
+    return (
+      <Wrapper>
+        <Slider
+          sliderOrder={sliderOrder}
+          changeSlideNum={changeSlideNum}
+          firstInit={firstInit}
+          slidesItemsArr={slidesItemsArr}
+          slidersToShow={2.9}
+          imgWidth={406}
+          imgHeight={100}
+          isNumbering={false}
+        />
+      </Wrapper>
+    )
   }
 
   return (

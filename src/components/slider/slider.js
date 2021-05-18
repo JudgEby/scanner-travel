@@ -69,6 +69,7 @@ const Slider = ({
   changeSlideNum = 0,
   firstInit,
   imgArr,
+  slidesItemsArr,
   slidersToShow = 1,
   imgWidth,
   imgHeight,
@@ -130,25 +131,27 @@ const Slider = ({
     )
   }
 
-  const sliders = imgArr.map((img, index, arr) => {
-    return (
-      <Slide
-        key={nanoid()}
-        src={img}
-        imgWidth={imgWidth}
-        sliderOrder={sliderOrder}
-        withMask={
-          withMask &&
-          (index < listenedSliderCurrentSlide ||
-            index >= listenedSliderCurrentSlide + listenedSliderSlidesToShow)
-            ? true
-            : false
-        }
-      >
-        {isNumbering && getNumberingSpans(index + 1, arr.length)}
-      </Slide>
-    )
-  })
+  const sliders =
+    imgArr &&
+    imgArr.map((img, index, arr) => {
+      return (
+        <Slide
+          key={nanoid()}
+          src={img}
+          imgWidth={imgWidth}
+          sliderOrder={sliderOrder}
+          withMask={
+            withMask &&
+            (index < listenedSliderCurrentSlide ||
+              index >= listenedSliderCurrentSlide + listenedSliderSlidesToShow)
+              ? true
+              : false
+          }
+        >
+          {isNumbering && getNumberingSpans(index + 1, arr.length)}
+        </Slide>
+      )
+    })
 
   const border = withMask && (
     <Border
@@ -161,6 +164,8 @@ const Slider = ({
       currentSlide={currentSlide}
     />
   )
+
+  const dataSlide = { [`data-slide-${sliderOrder}`]: true }
 
   return (
     <>
@@ -176,6 +181,8 @@ const Slider = ({
           itemWidth={itemWidth}
         >
           {sliders}
+          {slidesItemsArr &&
+            slidesItemsArr.map((item) => <div {...dataSlide}>{item}</div>)}
         </Sliders>
       </Wrapper>
       {border}
